@@ -1,8 +1,22 @@
-
-# Playwright
+# Dependencies and generated outputs
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+test-results/
+playwright-report/
+blob-report/
+allure-report/
+allure-results/
+playwright/.cache/
+playwright/.auth/
+coverage/
+dist/
+*.log
+
+# Private settings and authentication
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+**/storageState.json
+**/*.storageState.json
+**/auth.json
