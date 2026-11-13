@@ -1,26 +1,34 @@
 {
   "name": "testautomation",
   "version": "1.0.0",
-  "description": "TestAutomation",
+  "description": "Public-safe Playwright and TypeScript QA automation portfolio with a self-contained demo",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test:allure": "npx playwright test",
-    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
-    "allure:open": "npx allure open allure-report",
-    "allure:serve": "npx allure serve allure-results"
+    "test": "playwright test --config=playwright.portfolio.config.ts",
+    "test:portfolio": "playwright test --config=playwright.portfolio.config.ts",
+    "test:external": "playwright test --config=playwright.config.ts",
+    "test:allure": "playwright test --config=playwright.portfolio.config.ts",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sqatools/TestAutomation.git"
+    "url": "git+https://github.com/raajivvkumar/TestAutomation.git"
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "typescript",
+    "qa-automation",
+    "portfolio",
+    "e2e-testing"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sqatools/TestAutomation/issues"
+    "url": "https://github.com/raajivvkumar/TestAutomation/issues"
   },
-  "homepage": "https://github.com/sqatools/TestAutomation#readme",
+  "homepage": "https://github.com/raajivvkumar/TestAutomation#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.7.0",
