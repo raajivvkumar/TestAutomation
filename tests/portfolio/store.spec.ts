@@ -28,7 +28,7 @@ test.describe('Sample Store | public synthetic E2E flows', () => {
 
     await store.openCart();
     await expect(page.getByRole('heading', { name: 'Your cart' })).toBeVisible();
-    await expect(page.getByLabel('Cart items')).toContainText('Water Bottle');
+    await expect(page.getByRole('list', { name: 'Cart items' })).toContainText('Water Bottle');
     await expect(page.locator('#cart-total')).toHaveText('Total: ₹500');
 
     await store.checkout('Demo Tester', '123 Example Street');

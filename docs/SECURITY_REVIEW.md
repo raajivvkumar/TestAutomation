@@ -9,6 +9,12 @@ Review date: 2026-11-13. Scope: the public GitHub repository `raajivvkumar/TestA
 - Checked available source/history change text for common secret signatures such as private-key markers, GitHub/AWS token formats, and obvious credential assignments. This was a **targeted review, not a certified exhaustive secret scan**.
 - No recognizable *live* API credential was identified in the inspected material. This does **not** prove the entire Git history or third-party dependencies are free from secrets.
 
+## Additional content scan
+
+- Scanned 50 current text blobs smaller than 100 KB for recognizable private-key markers and common GitHub, AWS and OpenAI/Stripe token signatures; no matching live-token patterns were detected. The scan confirmed a sample password string and old machine hostname in committed test results.
+- A generated minified JavaScript bundle (~630 KB) and a binary icon were not covered by the small-text scan. Historic commit patches were inspected separately; this is still **not** a substitute for a dedicated full-history scanner.
+- The old test password was demonstrative input in a public practice page, not proof of a live credential.
+
 ## Findings
 
 1. Generated `allure-report/` and `allure-results/` had been committed. These contain test steps, illustrative password strings, an example email, and a local machine hostname. They should not be published as portfolio evidence.
